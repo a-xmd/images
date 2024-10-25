@@ -1,0 +1,8 @@
+.card {
+  outline: 1px solid blue;
+}
+
+.content {
+  outline: 1px solid red;
+  padding: 1rem;
+}

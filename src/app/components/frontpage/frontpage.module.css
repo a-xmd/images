@@ -1,0 +1,45 @@
+.frontpage {
+  margin: 9.5rem auto 9.5rem auto;
+
+  padding: 1rem;
+
+  max-width: 1408px;
+}
+
+.topStories {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 6.5rem;
+
+  .topStory {
+    outline: 1px solid black;
+    flex-grow: 1;
+    /* aspect-ratio: 4 / 3; */
+    border-radius: 0.5rem;
+
+    &.conditional {
+      display: none;
+
+      @media screen and (min-width: 744px) {
+        display: block;
+      }
+    }
+  }
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem 1rem;
+
+  @media screen and (min-width: 374px) {
+    grid-template-columns: repeat(2, minmax(0px, 1fr));
+  }
+
+  @media screen and (min-width: 744px) {
+    grid-template-columns: repeat(3, minmax(0px, 1fr));
+  }
+
+  @media screen and (min-width: 1266px) {
+    grid-template-columns: repeat(4, minmax(0px, 1fr));
+  }
+}

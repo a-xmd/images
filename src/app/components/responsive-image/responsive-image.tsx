@@ -10,7 +10,10 @@ interface ResponsiveImageProps {
 interface ResponsiveImageProps {
   images: Image[];
   sizes: string;
+
   alt?: string;
+  caption?: string;
+  copyright?: string;
 }
 
 const composeSourceSets = (images: Image[], type: "avif" | "jpg") => {
@@ -21,10 +24,12 @@ export const ResponsiveImage: FC<ResponsiveImageProps> = ({
   className,
   images,
   sizes,
+  caption,
   alt = "",
+  copyright = "© ahmed abbas",
 }) => {
   return (
-    <div className={clsx(styles.responsiveImage, className)}>
+    <figure className={clsx(styles.responsiveImage, className)}>
       <picture>
         <source
           srcSet={composeSourceSets(images, "avif")}
@@ -41,6 +46,8 @@ export const ResponsiveImage: FC<ResponsiveImageProps> = ({
           height={images[8].height}
         />
       </picture>
-    </div>
+      <small className={styles.copyright}>{copyright}</small>
+      {caption && <figcaption>{caption}</figcaption>}
+    </figure>
   );
 };

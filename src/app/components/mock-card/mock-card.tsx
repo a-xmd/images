@@ -11,11 +11,11 @@ interface MockCardProps {
 export const MockCard: FC<MockCardProps> = ({ images, sizes }) => {
   return (
     <div className={styles.card}>
-      <ResponsiveImage images={images} sizes={sizes} />
-      <div className={styles.content}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac
-        sollicitudin leo.
-      </div>
+      <ResponsiveImage
+        images={images}
+        sizes={sizes}
+        caption="Nulla aliquet fermentum gravida."
+      />
     </div>
   );
 };

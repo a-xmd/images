@@ -12,17 +12,20 @@ export const Frontpage = () => {
     "(min-width: 1408px) calc(1408px / 2 -  2rem), (min-width: 744px) calc(50vw - 2rem), calc(100vw - 2rem)";
 
   return (
-    <div className={styles.frontpage}>
+    <main className={styles.frontpage}>
+      <h1>avif experiments</h1>
       <div className={styles.topStories}>
         <ResponsiveImage
           className={styles.topStory}
           images={data[0]}
           sizes={topStorySizes}
+          caption="Left."
         />
         <ResponsiveImage
           className={clsx(styles.topStory, styles.conditional)}
           images={data[1]}
           sizes={topStorySizes}
+          caption="Right."
         />
       </div>
       <div className={styles.grid}>
@@ -36,6 +39,6 @@ export const Frontpage = () => {
             />
           ))}
       </div>
-    </div>
+    </main>
   );
 };

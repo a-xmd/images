@@ -208,3 +208,17 @@ iframe {
   max-inline-size: 100%;
   block-size: auto;
 }
+
+body {
+  background-color: #fff7ed;
+}
+
+h1 {
+  margin: 0 0 4rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+figure {
+  margin: unset;
+}

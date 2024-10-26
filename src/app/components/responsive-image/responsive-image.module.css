@@ -7,4 +7,13 @@
   width: 100%;
   background-color: #cbd5e1;
   display: block;
+  margin-bottom: 0.25rem;
+}
+
+.copyright {
+  font-size: 0.75rem;
+  font-variant-caps: small-caps;
+  display: block;
+  text-align: end;
+  margin-bottom: 0.5rem;
 }

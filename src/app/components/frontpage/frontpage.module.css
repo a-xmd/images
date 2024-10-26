@@ -1,8 +1,6 @@
 .frontpage {
   margin: 9.5rem auto 9.5rem auto;
-
   padding: 1rem;
-
   max-width: 1408px;
 }
 
@@ -12,7 +10,6 @@
   margin-bottom: 6.5rem;
 
   .topStory {
-    outline: 1px solid black;
     flex-grow: 1;
     /* aspect-ratio: 4 / 3; */
     border-radius: 0.5rem;
@@ -29,7 +26,7 @@
 
 .grid {
   display: grid;
-  gap: 1.5rem 1rem;
+  gap: 3rem 1rem;
 
   @media screen and (min-width: 374px) {
     grid-template-columns: repeat(2, minmax(0px, 1fr));

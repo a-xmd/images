@@ -12,10 +12,14 @@ for file in originals/*; do
   echo "🖼 Processing $file"
 
   for size in "${sizes_4_3[@]}"; do
-    output="$out_dir"/"$size"x$((size / 4 * 3)).avif
-    echo creating "$output"
+    output_avif="$out_dir"/"$size"x$((size / 4 * 3)).avif
+    output_jpeg="$out_dir"/"$size"x$((size / 4 * 3)).jpeg
 
-    magick "$file" -resize "$size" "$output"
+    echo creating "$output_avif"
+    magick "$file" -resize "$size" "$output_avif"
+
+    echo creating "$output_jpeg"
+    magick "$file" -resize "$size" "$output_jpeg"
   done
 
   printf "\n"

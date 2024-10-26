@@ -1,10 +1,10 @@
 .responsiveImage {
-  outline: 1px solid black;
+  border-radius: 0.25rem;
+  overflow: hidden;
 }
 
 .responsiveImage img {
   width: 100%;
-  outline: 2px solid hotpink;
-  display: inline-block;
   background-color: #cbd5e1;
+  display: block;
 }

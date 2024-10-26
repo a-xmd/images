@@ -1,10 +1,17 @@
 import styles from "./mock-card.module.css";
 import { ResponsiveImage } from "@/app/components/responsive-image/responsive-image";
+import { type FC } from "react";
+import { type Image } from "@/app/types";
 
-export const MockCard = () => {
+interface MockCardProps {
+  images: Image[];
+  sizes: string;
+}
+
+export const MockCard: FC<MockCardProps> = ({ images, sizes }) => {
   return (
     <div className={styles.card}>
-      <ResponsiveImage />
+      <ResponsiveImage images={images} sizes={sizes} />
       <div className={styles.content}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac
         sollicitudin leo.
